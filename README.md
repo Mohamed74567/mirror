@@ -3,7 +3,7 @@
 **Mirror** is an automated computer-vision and physics-identification pipeline
 that bridges the gap between raw monocular video and rigorous multi-body
 physics simulation. It takes a single-camera recording of a sagittal two-link
-movement — a lower-limb swing cycle, a pendulum arm, a mechanical linkage —
+movement,  a lower-limb swing cycle, a pendulum arm, a mechanical linkage 
 and automatically produces a **fully calibrated, dynamically stepped MuJoCo
 digital twin**, with no motion-capture equipment, no physical markers beyond
 coloured fiducials, and no manual rigging.
@@ -11,7 +11,7 @@ coloured fiducials, and no manual rigging.
 The core idea is a **closed feedback loop**: the simulated body is rendered
 from the exact camera perspective of the video, compared against the video's
 segmented limb silhouettes (Intersection over Union), and a derivative-free
-optimiser adjusts the model until simulation and observation agree — both
+optimiser adjusts the model until simulation and observation agree both
 visually and physically.
 
 ```text
