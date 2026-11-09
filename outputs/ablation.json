@@ -1,0 +1,284 @@
+[
+  {
+    "variant": "silhouette_only",
+    "mode": "silhouette",
+    "kp_weight": 0.0,
+    "seed_perturbation": {},
+    "x_optimized": [
+      0.4023148561593257,
+      0.41208188153636716,
+      0.06023950998623301,
+      -0.12955519100563198,
+      3385.3856381329642
+    ],
+    "mean_iou_calibration_frames": 0.935061740472845,
+    "mean_iou_heldout_frames": 0.9223982272782649,
+    "reproj_rmse_px_final": {},
+    "n_evals": 600,
+    "wall_time_s": 18.732159327000772,
+    "gt": {
+      "femur_err_pct": -4.210748533493873,
+      "tibia_err_pct": 3.0204703840917833,
+      "chain_err_pct": -0.6833246712569742,
+      "abs_femur_err_pct": 4.210748533493873,
+      "abs_tibia_err_pct": 3.0204703840917833,
+      "abs_chain_err_pct": 0.6833246712569742
+    },
+    "identified_offset_deg": {
+      "hip": 3.4514696821473274,
+      "knee": -7.422965658633956
+    }
+  },
+  {
+    "variant": "naive_fused_w0.1",
+    "mode": "naive_fused",
+    "kp_weight": 0.1,
+    "seed_perturbation": {},
+    "x_optimized": [
+      0.3988003644879081,
+      0.4439777761141347,
+      0.03447719268179689,
+      -0.06670668361011023,
+      4221.61915037428
+    ],
+    "mean_iou_calibration_frames": 0.8970563658272855,
+    "mean_iou_heldout_frames": 0.888944409392698,
+    "reproj_rmse_px_final": {
+      "hip": 0.00011385900253581556,
+      "knee": 2.908990713614452,
+      "ankle": 1.7098629340362652
+    },
+    "n_evals": 524,
+    "wall_time_s": 17.593733706999046,
+    "gt": {
+      "femur_err_pct": -5.047532264783777,
+      "tibia_err_pct": 10.994444028533668,
+      "chain_err_pct": 2.77782202463936,
+      "abs_femur_err_pct": 5.047532264783777,
+      "abs_tibia_err_pct": 10.994444028533668,
+      "abs_chain_err_pct": 2.77782202463936
+    },
+    "identified_offset_deg": {
+      "hip": 1.9753976301262899,
+      "knee": -3.822011436173818
+    }
+  },
+  {
+    "variant": "twophase_w0.05",
+    "mode": "twophase",
+    "kp_weight": 0.05,
+    "seed_perturbation": {},
+    "x_optimized": [
+      0.403886264311746,
+      0.415504104228268,
+      0.06072253361748131,
+      -0.12796426038504224,
+      2989.7605697585914
+    ],
+    "mean_iou_calibration_frames": 0.9312901313776157,
+    "mean_iou_heldout_frames": 0.9217236971819854,
+    "reproj_rmse_px_final": {
+      "hip": 5.6517098464723626e-05,
+      "knee": 0.30151484580887056,
+      "ankle": 1.9911417360611787
+    },
+    "n_evals": 222,
+    "wall_time_s": 18.681273554000654,
+    "marker_offsets_px": {
+      "hip": [
+        -0.00014977357046852546,
+        -8.121510564329526e-05
+      ],
+      "knee": [
+        4.998367480334956,
+        -0.7576095831527194
+      ],
+      "ankle": [
+        -3.760760370663302,
+        4.371409182133668
+      ]
+    },
+    "marker_offset_errors_px": {
+      "hip": 0.00017037610101050548,
+      "knee": 3.242390827828061,
+      "ankle": 0.6725786322438624
+    },
+    "gt": {
+      "femur_err_pct": -3.836603735298565,
+      "tibia_err_pct": 3.8760260570669947,
+      "chain_err_pct": -0.0743452999982986,
+      "abs_femur_err_pct": 3.836603735298565,
+      "abs_tibia_err_pct": 3.8760260570669947,
+      "abs_chain_err_pct": 0.0743452999982986
+    },
+    "identified_offset_deg": {
+      "hip": 3.4791448976229384,
+      "knee": -7.331812048576035
+    }
+  },
+  {
+    "variant": "twophase_w0.1",
+    "mode": "twophase",
+    "kp_weight": 0.1,
+    "seed_perturbation": {},
+    "x_optimized": [
+      0.4075028693426417,
+      0.4196041191082335,
+      0.061414926262339964,
+      -0.12943967937043166,
+      3282.4203904072415
+    ],
+    "mean_iou_calibration_frames": 0.9257682368220278,
+    "mean_iou_heldout_frames": 0.9156288878811146,
+    "reproj_rmse_px_final": {
+      "hip": 6.014554998666454e-05,
+      "knee": 0.4064630950774935,
+      "ankle": 2.017588833703317
+    },
+    "n_evals": 240,
+    "wall_time_s": 19.234663747000013,
+    "marker_offsets_px": {
+      "hip": [
+        -0.00015296323579683246,
+        -8.294475747838703e-05
+      ],
+      "knee": [
+        5.096630868100874,
+        -1.5324963852128466
+      ],
+      "ankle": [
+        -3.202691550891217,
+        2.0302339192265535
+      ]
+    },
+    "marker_offset_errors_px": {
+      "hip": 0.0001740045525225872,
+      "knee": 2.469394989396714,
+      "ankle": 3.074932737074541
+    },
+    "gt": {
+      "femur_err_pct": -2.9755072993710243,
+      "tibia_err_pct": 4.901029777058363,
+      "chain_err_pct": 0.8667059086433043,
+      "abs_femur_err_pct": 2.9755072993710243,
+      "abs_tibia_err_pct": 4.901029777058363,
+      "abs_chain_err_pct": 0.8667059086433043
+    },
+    "identified_offset_deg": {
+      "hip": 3.51881607393924,
+      "knee": -7.416347329452323
+    }
+  },
+  {
+    "variant": "twophase_w0.1_perturbed_short",
+    "mode": "twophase",
+    "kp_weight": 0.1,
+    "seed_perturbation": {
+      "femur_scale": 0.88,
+      "tibia_scale": 0.88
+    },
+    "x_optimized": [
+      0.40173748052126035,
+      0.4311929897283061,
+      0.05409409216465211,
+      -0.1129063026702598,
+      2044.7358182863397
+    ],
+    "mean_iou_calibration_frames": 0.9218643636168032,
+    "mean_iou_heldout_frames": 0.9105524416749885,
+    "reproj_rmse_px_final": {
+      "hip": 6.328413614090267e-05,
+      "knee": 0.40390533065894596,
+      "ankle": 1.2651716196555696
+    },
+    "n_evals": 240,
+    "wall_time_s": 19.102070853999976,
+    "marker_offsets_px": {
+      "hip": [
+        -0.00015572227438198638,
+        -8.444089556824963e-05
+      ],
+      "knee": [
+        4.379240626390562,
+        -0.5915232252748233
+      ],
+      "ankle": [
+        -2.8232284255085265,
+        1.7688206380934481
+      ]
+    },
+    "marker_offset_errors_px": {
+      "hip": 0.00017714313868469954,
+      "knee": 3.464542700525558,
+      "ankle": 3.4387950516630057
+    },
+    "gt": {
+      "femur_err_pct": -4.348218923509437,
+      "tibia_err_pct": 7.798247432076521,
+      "chain_err_pct": 1.5768866158007797,
+      "abs_femur_err_pct": 4.348218923509437,
+      "abs_tibia_err_pct": 7.798247432076521,
+      "abs_chain_err_pct": 1.5768866158007797
+    },
+    "identified_offset_deg": {
+      "hip": 3.099363177626261,
+      "knee": -6.469054623432544
+    }
+  },
+  {
+    "variant": "twophase_w0.1_perturbed_long",
+    "mode": "twophase",
+    "kp_weight": 0.1,
+    "seed_perturbation": {
+      "femur_scale": 1.12,
+      "tibia_scale": 1.12
+    },
+    "x_optimized": [
+      0.40150737349612986,
+      0.4312924084300144,
+      0.06029483918571715,
+      -0.12420023761030691,
+      3338.5036526324193
+    ],
+    "mean_iou_calibration_frames": 0.9226556821207432,
+    "mean_iou_heldout_frames": 0.9122358937765429,
+    "reproj_rmse_px_final": {
+      "hip": 6.417042850064846e-05,
+      "knee": 0.2541992236513712,
+      "ankle": 1.2614088703875823
+    },
+    "n_evals": 240,
+    "wall_time_s": 19.162406613000712,
+    "marker_offsets_px": {
+      "hip": [
+        -0.0001565013877691257,
+        -8.486338394853021e-05
+      ],
+      "knee": [
+        4.946640319167194,
+        -0.28224478585166324
+      ],
+      "ankle": [
+        -2.5410920314019396,
+        1.9372636140607646
+      ]
+    },
+    "marker_offset_errors_px": {
+      "hip": 0.0001780294310187445,
+      "knee": 3.7181381211388214,
+      "ankle": 3.3924573144838606
+    },
+    "gt": {
+      "femur_err_pct": -4.403006310445268,
+      "tibia_err_pct": 7.823102107503588,
+      "chain_err_pct": 1.5609490153834353,
+      "abs_femur_err_pct": 4.403006310445268,
+      "abs_tibia_err_pct": 7.823102107503588,
+      "abs_chain_err_pct": 1.5609490153834353
+    },
+    "identified_offset_deg": {
+      "hip": 3.454639811761606,
+      "knee": -7.116149429592579
+    }
+  }
+]

@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      # Deterministic headless CI: the analytic silhouette backend needs no GL.
+      # (Remove this line on a machine with EGL/OSMesa to exercise mujoco.Renderer.)
+      MUJOCO_GL: disable
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate demo asset
+        run: python scripts/make_demo_video.py
+
+      - name: Run test suite
+        run: python -m pytest -q
+
+      - name: End-to-end smoke run
+        run: python run_mirror.py --profile smoke
+
+      - name: Upload pipeline outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mirror-outputs
+          path: |
+            outputs/
+            models/
+          if-no-files-found: ignore

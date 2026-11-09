@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mirror-pipeline"
+version = "1.1.0"
+description = "Mirror: closed-loop monocular video -> MuJoCo digital-twin pipeline (vision-based system identification via silhouette IoU optimisation)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Mirror Project" }]
+keywords = ["mujoco", "computer-vision", "system-identification", "digital-twin", "biomechanics"]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "opencv-python-headless>=4.8",
+    "mujoco>=3.1",
+    "matplotlib>=3.7",
+    "imageio>=2.31",
+    "imageio-ffmpeg>=0.4.8",
+    "pillow>=10.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
